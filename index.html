@@ -246,21 +246,13 @@
     .dl:nth-child(3){animation-delay:0.54s}
     .dl:nth-child(4){animation-delay:0.66s}
     .dl:nth-child(5){animation-delay:0.78s}
+    .dl { transition: transform 0.2s ease, filter 0.2s ease; }
+    .dl:hover { transform: translateY(-8px) scale(1.2) !important; filter: drop-shadow(0 0 14px #7b6ef6); }
     @keyframes letterDrop {
       0%  { opacity:0; transform: translateY(40px) rotateX(-90deg); }
       60% { opacity:1; transform: translateY(-6px) rotateX(10deg); }
       80% { transform: translateY(3px) rotateX(-5deg); }
       100%{ opacity:1; transform: translateY(0) rotateX(0deg); }
-    }
-    .daksh-name:hover .dl {
-      animation: none;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      transition: transform 0.2s, filter 0.2s;
-    }
-    .daksh-name:hover .dl:hover {
-      transform: translateY(-8px) scale(1.2);
-      filter: drop-shadow(0 0 12px #7b6ef6);
     }
     .fade-in { opacity:0; transform:translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
