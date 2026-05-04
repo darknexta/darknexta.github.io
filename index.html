@@ -230,6 +230,38 @@
       from { opacity:0; transform:translateY(28px); }
       to   { opacity:1; transform:translateY(0); }
     }
+    /* DAKSH NAME ANIMATION */
+    .daksh-name { display: inline-block; }
+    .dl {
+      display: inline-block;
+      background: linear-gradient(135deg, #7b6ef6, #3ecfcf);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0;
+      transform: translateY(40px) rotateX(-90deg);
+      animation: letterDrop 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+    .dl:nth-child(1){animation-delay:0.3s}
+    .dl:nth-child(2){animation-delay:0.42s}
+    .dl:nth-child(3){animation-delay:0.54s}
+    .dl:nth-child(4){animation-delay:0.66s}
+    .dl:nth-child(5){animation-delay:0.78s}
+    @keyframes letterDrop {
+      0%  { opacity:0; transform: translateY(40px) rotateX(-90deg); }
+      60% { opacity:1; transform: translateY(-6px) rotateX(10deg); }
+      80% { transform: translateY(3px) rotateX(-5deg); }
+      100%{ opacity:1; transform: translateY(0) rotateX(0deg); }
+    }
+    .daksh-name:hover .dl {
+      animation: none;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      transition: transform 0.2s, filter 0.2s;
+    }
+    .daksh-name:hover .dl:hover {
+      transform: translateY(-8px) scale(1.2);
+      filter: drop-shadow(0 0 12px #7b6ef6);
+    }
     .fade-in { opacity:0; transform:translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
 
@@ -261,7 +293,7 @@
   <section class="hero" id="home">
     <div class="hero-inner">
       <div class="hero-tag">Available for opportunities</div>
-      <h1>Hi, I'm Daksh.<br><span class="line2">I build things.</span></h1>
+      <h1>Hi, I'm <span class="daksh-name"><span class="dl">D</span><span class="dl">a</span><span class="dl">k</span><span class="dl">s</span><span class="dl">h</span></span>.<br><span class="line2">I build things.</span></h1>
       <p class="hero-sub">A passionate developer &amp; creator crafting purposeful digital experiences. I love clean code, great design, and solving real problems.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View My Work</a>
